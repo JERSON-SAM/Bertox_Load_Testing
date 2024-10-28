@@ -22,7 +22,7 @@ def bertoxcalculator():
         </style>
     </head>
     <body>
-        <h1>Simple Calculator</h1>
+        <h1>TAN LOAD TESTING </h1>
         <form action="/calculate" method="get">
             <input type="number" name="num1" placeholder="Number 1" required>
             <select name="operation" required>
