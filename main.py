@@ -74,7 +74,7 @@ async def read_root(request: Request):
     """
 
 @app.get("/calculate")
-async def calculate(operation: str, num1: float, num2: float):
+async def calculate(num1: float,operation: str,num2: float):
     if operation == "+":
         return {"result": num1 + num2}
     elif operation == "-":
