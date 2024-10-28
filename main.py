@@ -18,10 +18,10 @@ async def read_root(request: Request):
         <form action="/calculate" method="get">
             <label for="operation">Operation:</label>
             <select name="operation" required>
-                <option value="add">Add</option>
-                <option value="subtract">Subtract</option>
-                <option value="multiply">Multiply</option>
-                <option value="divide">Divide</option>
+                <option value="+">(+)</option>
+                <option value="-">(-)</option>
+                <option value="*">(×)</option>
+                <option value="/">(÷)</option>
             </select><br><br>
 
             <label for="num1">Number 1:</label>
@@ -38,13 +38,13 @@ async def read_root(request: Request):
 
 @app.get("/calculate")
 async def calculate(operation: str, num1: float, num2: float):
-    if operation == "add":
+    if operation == "+":
         return {"result": num1 + num2}
-    elif operation == "subtract":
+    elif operation == "-":
         return {"result": num1 - num2}
-    elif operation == "multiply":
+    elif operation == "*":
         return {"result": num1 * num2}
-    elif operation == "divide":
+    elif operation == "/":
         return {"result": num1 / num2 if num2 != 0 else "Cannot divide by zero"}
     else:
         return {"error": "Invalid operation"}
