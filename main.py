@@ -51,7 +51,7 @@ async def read_root(request: Request):
         </style>
     </head>
     <body>
-        <h1>Simple Calculator</h1>
+        <h1>TAN Calculator</h1>
         <form action="/calculate" method="get">
             <label for="num1">Num1:</label>
             <input type="number" name="num1" step="any" required><br>
